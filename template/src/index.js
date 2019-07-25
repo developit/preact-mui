@@ -5,9 +5,11 @@ import theme from './components/theme';
 
 // eslint-disable-next-line react/display-name
 export default () => (
-	<ThemeProvider theme={theme}>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-		<CssBaseline />
-		<App />
-	</ThemeProvider>
+	<div id="app">
+		<ThemeProvider theme={theme}>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+			<CssBaseline />
+			<App />
+		</ThemeProvider>
+	</div>
 );
