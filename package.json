@@ -12,8 +12,9 @@
     "serve": "^11.1.0"
   },
   "scripts": {
-    "start": "preact watch --no-esm",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
-    "serve": "serve build -s -n"
+    "serve": "preact build && preact serve",
+    "dev": "preact watch"
   }
 }
